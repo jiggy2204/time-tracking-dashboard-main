@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {    
+    /*
+    PRIMARY
+    */
+    --blue: hsl(246, 80%, 60%);
+    --ltRedWORK: hsl(15, 100%, 70%);
+    --softBluePLAY: hsl(348, 100%, 68%);
+    --limeGreenEXERCISE: hsl(145, 58%, 55%);
+    --violetSOCIAL: hsl(264, 64%, 52%);
+    --softOrangeSELFCARE: hsl(43, 84%, 65%);
+
+    /*
+    NEUTRAL
+    */
+    --veryDkBlue: hsl(226, 43%, 10%);
+    --dkBlue: hsl(235, 46%, 20%);
+    --desatBlue: hsl(235, 45%, 61%);
+    --paleBlue: hsl(236, 100%, 87%);
+}
+
+*,
+*::before,
+*::after,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Rubik", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*
+Created at https://grid.layoutit.com
+*/
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+  }
+  
+  .boxes { grid-area: 2 / 2 / 4 / 6; }
+  
+  .user { grid-area: 2 / 2 / 4 / 3; }
+  
+  .timeframes { grid-area: 2 / 3 / 4 / 6; }
+  
+  
+  
+
+/*
+SITE
+*/
+
+body {
+    background-color: var(--veryDkBlue);
+    color: var(--paleBlue);
+}
+
+.box {
+    border-radius: 25px;   
+}
+
+/*
+USER BOX
+*/
+
+.box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.box-title,
+.ellipses {
+    width: 100px;
+}
+
+.info-box {
+    width: 100%;
+    background-color: var(--ltRedWORK);
+}
+
+/*
+FOOTER FROM SITE
+*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {    
+    /*
+    PRIMARY
+    */
+    --blue: hsl(246, 80%, 60%);
+    --ltRedWORK: hsl(15, 100%, 70%);
+    --softBluePLAY: hsl(195, 74%, 62%);
+    --lightRedSTUDY: hsl(348, 100%, 68%);
+    --limeGreenEXERCISE: hsl(145, 58%, 55%);
+    --violetSOCIAL: hsl(264, 64%, 52%);
+    --softOrangeSELFCARE: hsl(43, 84%, 65%);
+
+    /*
+    NEUTRAL
+    */
+    --veryDkBlue: hsl(226, 43%, 10%);
+    --dkBlue: hsl(235, 46%, 20%);
+    --desatBlue: hsl(235, 45%, 61%);
+    --paleBlue: hsl(236, 100%, 87%);
+}
+
+*,
+*::before,
+*::after,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Rubik", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*
+SITE
+*/
+
+body {
+  background-color: var(--veryDkBlue);
+  color: var(--paleBlue);
+}
+
+main {
+  width: 100%;
+}
+
+.box {
+
+  border-radius: 25px;   
+}
+
+button {
+  background: none;
+  background-color: none;
+  color: var(--desatBlue);
+  border: none;
+}
+
+button.active {
+  color: white;
+}
+
+/*
+Created at https://grid.layoutit.com
+*/
+.container { 
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*
+USER BOX
+*/
+
+#userProfile {
+  position: relative;
+  background-color: var(--dkBlue);
+  margin-bottom: 2rem;
+}
+
+#userHeader {
+  text-align: left;
+}
+
+#user-profile {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  padding: 10% 0;
+}
+
+#userHolder {
+  background-color: var(--blue);
+}
+
+.user-name {
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+#userTimes {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 7% 0;
+}
+
+.active {
+  color: white;
+}
+
+#user-image {
+  border: 3px solid white;
+  border-radius: 50%;
+  width: 30%;
+  height: auto;
+}
+
+
+/*
+TIME BOX
+*/
+
+.time-box {
+  margin-bottom: 5%;
+  position: relative;
+  text-align: right;
+}
+
+.bgIcon {
+  border: none;
+  border-radius: 0;
+  height: 225px;
+  width: auto;
+  padding-bottom: 24%;
+  padding-right: 5%;
+}
+
+.info-box {
+  position: absolute;
+  bottom: -5px;
+  z-index: 10;
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--dkBlue);
+}
+
+.box-header,
+.box-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.box-title {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.ellipses {
+  width: 2rem;
+}
+
+.box-main-hours {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.box-main-timeframe {
+  font-weight: 300;
+}
+
+/*
+FOOTER FROM SITE
+*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 768px) {
+
+.bgIcon {
+  padding: 0;
+  padding-bottom: 10%;
+  padding-right: 5%;
+}
+
+}
+
+@media screen and (min-width: 1024px){
+  #root {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  footer {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    margin: 0 auto;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 70vw;
+  }
+
+  .timeframes{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .timeframe {
+    width: 30%;
+    margin: 1%;
+  }
+
+  #userProfile,
+  .time-box {
+    margin-bottom: 0;
+  }
+
+  #userProfile {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin-right: 2%;
+  }
+
+  #user-profile {
+    align-items: start;
+    flex-direction: column;
+  }
+  
+  #user-image {
+    width: 40%;
+  }
+
+  #userTimes {
+    text-align: left;
+    flex-direction: column;
+    align-items:flex-start;
+    height: 100%;
+    margin-left: 10%;
+  }
+
+  .viewButton {
+    line-height: 15%;
+  }
+
+  .user-name {
+    width: 80%;
+    font-size: 3rem;
+  }
+
+  .info-box {
+    bottom: 0;
+  }
+
+  .box-main {
+    text-align: left;
+    display: inline;
+  }
+}
