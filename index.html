@@ -2,54 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="style.css">
-  <title>Jennifer D. Ignacio | Time tracking dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
 </head>
-<body class="container">
-  <main class="boxes">
-    <div class="user">
-      <div id="work-select" class="user box select-box">
-        <section id="user-profile" class="box user-box">
-          <img id="user-image" class="userImage" src="images/image-jeremy.png" />
-          <div id="user-info">
-            <p>Report for</p>
-            <h4>{{user.name}}</h4>
-          </div>
-        </section>
-        <section id="user-times" class="dash-times">
-          <button id="btnDaily" value="daily">Daily</button>
-          <button id="btnWeekly" value="weekly">Weekly</button>
-          <button id="btnMonthly" value="monthly">Monthly</button>
-        </section>
-      </div>
-    </div>
-
-
-    <div id="timeframes" class="timeframes">q
-      <div class="box time-box">
-        <div class="box info-box">
-            <div class="box-header">
-                <p class="box-title">{e.title}</p>
-                <img class="elipses" src="images/icon-ellipsis.svg" />
-            </div>
-            <div class="box-main">
-                <p class="box-main-hours"><span class="text-hours"></span>hrs</p>
-                <p class="box-main-timeframe"><span class="timeframe-hours"></span>hrs</p>
-            </div>
+<body>
+  <main>
+    
+    <div id="profile" class="card">
+      
+      <div class="card profile-header">
+        <img src="/images/image-jeremy.png" alt="user profile image"/>
+        <div class="profile-sub-header">
+          <p>Report for</p>
+          <p class="profile-name">Jeremy Robson</p>
         </div>
+      </div>
+
+      <div class="card profile-menu">
+        <button class="btn profile-btn">Daily</button>
+        <button class="btn profile-btn">Weekly</button>
+        <button class="btn profile-btn">Monthly</button>
+      </div>
+
     </div>
-    </div>
+
+    <section id="timecards">
+
+      <div id="workCard" class="card">
+        <div class="upper-card">
+          <h3 class="cardTitle">Work</h3>          
+          <img src="/images/icon-ellipsis.svg" />
+        </div>
+
+        <div class="bottom-card">
+          <p>32hrs</p>
+          <p><span class="timePeriod">Last Week</span> - <span class="timeHours">36</span>hrs</p>
+        </div>
+
+      </div>
+
+      <div id="playCard" class="card">
+
+      </div>
+
+      <div id="studyCard" class="card">
+
+      </div>
+
+      <div id="exerciseCard" class="card">
+
+      </div>
+
+      <div id="socialCard" class="card">
+
+      </div>
+
+      <div id="selfCareCard" class="card">
+
+      </div>
+
+    </section>
+
   </main>
 
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://jiggyart.org">Jennifer D. Ignacio</a>.
-    </div>
-  </footer>
-
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
 </body>
-<script type="text/javascript" src="./index.js" crossorigin="anonymous"></script>
 </html>
